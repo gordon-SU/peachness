@@ -19,8 +19,8 @@
                             {{--{!! csrf_field() !!}--}}
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input name="_method" type="hidden" value="PUT">
-                            <img src = "{{$video->imgurl}}">
-                            <button class="btn">修改图片</button>
+                            <img  style="width: 150px; height: 150px;" src = "{{asset('uploads/'.$video->imgurl)}}">
+                            <input name="file" type="file" />
                             <br>
                             <input type="text" name="title" class="form-control" required="required" placeholder="请输入标题" value="{{ $video->title }}">
                             <br>

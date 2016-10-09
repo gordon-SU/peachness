@@ -23,7 +23,16 @@
                                     <p>
                                         {{ $video->description }}
                                     </p>
-                                </div>
+                                    <img  style="width: 150px; height: 150px;" src="{{ asset('uploads/'.$video->imgurl)}}">
+                                    <video width="320" height="240" controls="controls">
+                                        <source src="{{$video->videoPath()}}" type="video/mp4" />
+                                        <source src="movie.ogg" type="video/ogg" />
+                                        <source src="movie.webm" type="video/webm" />
+                                        <object data="movie.mp4" width="320" height="240">
+                                            <embed src="movie.swf" width="320" height="240" />
+                                        </object>
+                                    </video>
+                                </div >
                             </div>
                             <a href="{{ url('admin/video/'.$video->id.'/edit') }}" class="btn btn-success">编辑</a>
                             <form action="{{ url('admin/video/'.$video->id) }}" method="POST" style="display: inline;">

@@ -145,6 +145,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		// alipay
+        'Latrell\Alipay\AlipayServiceProvider',
+//		'Lxu\Alipay\AlipayServiceProvider::class',
+		'Ignited\LaravelOmnipay\LaravelOmnipayServiceProvider'
+
 	],
 
 	/*
@@ -192,6 +197,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'Omnipay' => 'Ignited\LaravelOmnipay\Facades\Omnipay',
 
 	],
 

@@ -52,4 +52,6 @@ $app->singleton(
 |
 */
 
+//$app->configure('laravel-omnipay');
+
 return $app;
